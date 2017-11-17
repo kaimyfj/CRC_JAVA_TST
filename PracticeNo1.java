@@ -7,7 +7,7 @@ import java.io.FileReader;
 /**
  * Created by yangfanjing on 2017/11/1.
  */
-public class Login {
+public class PracticeNo1 {
     /*5.登录校验*/
     public  void checkLogin (String userName,String passWord){
 
@@ -97,8 +97,8 @@ public class Login {
        arrUnOrder=arrSort(arrUnOrder);
        System.out.println(Arrays.toString(arrUnOrder));
 
-       Login login=new Login();
-       login.writeArrToTxt(arrUnOrder);
+       PracticeNo1 practiceNo1=new PracticeNo1();
+       practiceNo1.writeArrToTxt(arrUnOrder);
 
 
    }
@@ -224,9 +224,9 @@ public class Login {
             arrUnOrder[i]=random;
         }
 
-        Login login=new Login();
+        PracticeNo1 practiceNo1=new PracticeNo1();
         Arrays.sort(arrUnOrder);
-        login.writeArrToTxt(arrUnOrder);
+        practiceNo1.writeArrToTxt(arrUnOrder);
 //      login.getrepeatInArr(arrUnOrder);
 
     }
@@ -253,41 +253,39 @@ public class Login {
     /*调用案例*/
    public static void main(String[] arg) throws Exception
    {
-       Login login=new Login();
+       PracticeNo1 practiceNo1=new PracticeNo1();
        long startTime=System.currentTimeMillis();
        long endTime;
-//       login.checkLogin("YANGFANJING","1234");
-//       login.practiceNo6(1,200);
+//       practiceNo1.checkLogin("YANGFANJING","1234");
+//       practiceNo1.practiceNo6(1,200);
          /*第7题含8.9的输出*/
-//        login.practiceNo7();
-//
+//       practiceNo1.practiceNo7();
 
-       /*附加题1*/
-//       login.practiceNo11();
+
+//       /*附加题1*/
+//       practiceNo1.practiceNo11();
 //       endTime=System.currentTimeMillis(); //获取结束时间
 //       System.out.println("附加题1运行时间： "+(endTime-startTime)+"ms");
-       // 附加题1运行时间： 2080ms
-       // 优化后 附加题1运行时间： 642ms（主要优化写入TXT的逻辑，采用PrintStream代替原OutputStreamWriter类）
-       int[] arrFromTxt= login.readArrFromTxt();
+       // 附加题1运行时间： 642ms
+       int[] arrFromTxt= practiceNo1.readArrFromTxt();
 
        /*附加题2*/
-//       login.getrepeatInArr(arrFromTxt);
+//       practiceNo1.getrepeatInArr(arrFromTxt);
 //       endTime=System.currentTimeMillis();
 //       System.out.println("附加题2运行时间： "+(endTime-startTime)+"ms");
        //附加题4运行时间： 4429ms
 
        /*附加题3*/
-//     login.getMaxInArr(arrFromTxt);
+//     practiceNo1.getMaxInArr(arrFromTxt);
 //     endTime=System.currentTimeMillis();
 //     System.out.println("附加题3运行时间： "+(endTime-startTime)+"ms");
 //       附加题3运行时间： 383ms
 
         /*附加题4*/
-//       arrFromTxt=login.arrSort(arrFromTxt); //数组排序
 //       Arrays.sort(arrFromTxt);
 //       System.out.println(Arrays.toString(arrFromTxt));
 //       endTime=System.currentTimeMillis();
 //       System.out.println("附加题4运行时间： "+(endTime-startTime)+"ms");
-       //附加题4运行时间： 1313ms
+       //附加题4运行时间： 900ms
    }
 }
